@@ -1,0 +1,32 @@
+<form (ngSubmit)="save()" ngNativeValidate>
+    <div class="signup">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      
+      <div class="form-group">
+      <label ><b>username</b></label>
+      <input type="text" class="form-control" placeholder="Enter username" pattern="^[a-zA-Z]+$" name="uname" required  [(ngModel)]="user.username" required minlength="3" maxlength="15"/>
+    </div>
+
+
+
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Enter Password" pattern="^[a-zA-Z]" name="psw" required  [(ngModel)]="user.password" required minlength="6" maxlength="15"/>
+     
+
+
+
+  
+      <label for="psw-confirm"><b>Confirm Password</b></label>
+      <input type="password" class="form-control" placeholder="Confirm Password"  pattern="^[a-zA-Z]"  name="psw-confirm" required   [(ngModel)]="user.confirmPassword" required minlength="6" maxlength="15"/>
+      
+      
+      <a href=" newuser">
+       
+        <button type="submit" class="signup" >signup</button>
+      </a>
+    </div>
+   
+    
+  </form>
